@@ -28,7 +28,7 @@ const RightPannel = ({ score, percentile, rank }) => {
   const percentage = (score / 15) * 100;
 
   return (
-    <div className="w-[50rem] bg-gray-100 mr-2 flex flex-col gap-14">
+    <div className="w-full md:w-[50rem] bg-gray-100 mr-2 flex flex-col gap-14">
       <div className="bg-white p-6 rounded-lg shadow-md mt-[75px]">
         <h2 className="text-xl font-semibold mb-4">Syllabus Wise Analysis</h2>
         <div className="space-y-12">

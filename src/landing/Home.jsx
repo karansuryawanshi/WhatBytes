@@ -29,16 +29,12 @@ const Dashboard = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 flex md:flex-row flex-col w-screen gap-6">
-      {/* Sidebar */}
       <Navbar></Navbar>
-
-      {/* Main Content */}
       <div className="flex flex-col md:flex-grow  w-full space-y-4">
-        {/* Header Card */}
-        <p className="my-6 text-lg">Skill test</p>
-        <div className="bg-white shadow-md rounded-lg p-6 flex justify-between items-center">
+        <p className="my-6 mx-2 text-lg">Skill test</p>
+        <div className="bg-white shadow-md rounded-lg p-6 flex sm:flex-row flex-col justify-between items-center">
           <div>
-            <div className="flex items-center space-x-3">
+            <div className="flex flex-col gap-2 sm:flex-row items-center space-x-3">
               <img src={HTML} alt="HTML5 Logo" className="w-12 h-12" />
               <div>
                 <h2 className="text-xl font-semibold">
@@ -59,10 +55,9 @@ const Dashboard = () => {
         </div>
 
         <div className="flex gap-6">
-          {/* Quick Statistics */}
           <div className="bg-white w-full shadow-md rounded-lg p-6 space-y-4">
             <h3 className="text-lg font-semibold">Quick Statistics</h3>
-            <div className="flex justify-between">
+            <div className="flex flex-col gap-6 sm:flex-row justify-between">
               <div className="flex gap-2 items-center justify-center text-center">
                 <div className="border border-gray-400 bg-neutral-50 p-2 rounded-full">
                   <Trophy className="w-8 h-8 mx-auto text-yellow-600" />
@@ -93,12 +88,10 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-
-        {/* Comparison Graph */}
         <Graph score={score} percentile={percentile} rank={rank}></Graph>
 
         {isModalOpen && (
-          <div className="fixed z-50 inset-0 flex items-center justify-center bg-neutral-900/90 bg-opacity-50">
+          <div className="fixed z-50 inset-0 flex items-center justify-center bg-black/90 bg-opacity-50">
             <div className="bg-white p-6 rounded-lg shadow-lg w-96">
               <h2 className="text-lg font-semibold mb-4">Update Score</h2>
               <label className="block mb-2">
@@ -130,7 +123,7 @@ const Dashboard = () => {
               </label>
               <div className="flex justify-end space-x-2">
                 <button
-                  className="px-4 py-2 bg-gray-300 rounded"
+                  className="px-4 py-2 bg-red-500 text-white rounded"
                   onClick={() => setIsModalOpen(false)}
                 >
                   Cancel
