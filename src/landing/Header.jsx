@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import MainLogo from "../assets/MainLogo.png";
-import Profile_Image from "../assets/profile_Image.png";
+import Profile_image from "../assets/profile_image.png";
 
 const Header = () => {
   const [hidden, setHidden] = useState(false);
@@ -16,7 +16,7 @@ const Header = () => {
           <p className="border p-2 flex items-center gap-4 rounded-md border-neutral-400">
             <img
               className="w-8 h-8 rounded-full"
-              src={Profile_Image}
+              src={Profile_image}
               alt="Profile"
               onClick={() => {
                 if (hidden == false) {
